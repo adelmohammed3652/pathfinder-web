@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>atendence rate</title>
+    <style>
+        body {
+            background-color: rgba(0, 77, 77, 0.637);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: #444444;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 0.5rem;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            font-size: 18px;
+            margin-right: 0.5rem;
+            color: white;
+        }
+
+        .text a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .links-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .links-container a {
+            text-decoration: none;
+            color: white;
+            margin-left: 1rem;
+            padding: 0.5rem;
+        }
+
+        .links-container a:hover {
+            background-color: #37508a;
+            border-radius: 0.5rem;
+        }
+
+        .profile-dropdown {
+            position: relative;
+        }
+
+        .profile-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            margin-left: 1rem;
+        }
+
+        .collapse-group {
+            position: absolute;
+            top: 100%;
+            right: -1rem;
+            background: #444444;
+            padding: 0.5rem;
+            display: none;
+            min-width: 150px;
+            z-index: 999;
+        }
+
+        .profile-dropdown:hover .collapse-group {
+            display: block;
+        }
+
+        .collapse-group a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        .collapse-group a:hover {
+            background-color: #37508a;
+            border-radius: 0.5rem;
+        }
+
+        /* Responsive Styles */
+
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .logo-container {
+                margin-bottom: 1rem;
+            }
+
+            .links-container {
+                flex-direction: column;
+            }
+
+            .links-container a {
+                margin: 0.5rem 0;
+            }
+
+            .profile-dropdown {
+                position: static;
+            }
+
+            .collapse-group {
+                position: static;
+                display: block;
+                background: none;
+                padding: 0;
+                min-width: auto;
+                margin-top: 1rem;
+                right: 0;
+            }
+        }
+         /* Attendance Rate Calculator Styles */
+    
+    h1 {
+      text-align: center;
+      color: aliceblue;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: aliceblue;
+    }
+    
+    input[type="text"] {
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      background-color: #f0f0f0;
+      margin-bottom: 10px;
+      width: 25rem;
+      margin-left: 27rem;
+      margin-right: auto;
+      box-sizing: border-box;
+      color: black;
+    }
+    
+    input[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+    
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      color: #f0f0f0;
+      border-color: #f0f0f0, 2rem, 3rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://drive.google.com/uc?export=view&id=1GOnqY3jTzarVHamfVZ7IVZiuNEcbskIM" alt="Logo">
+            </div>
+            <div class="text">
+                <a href="home.html">Pathfinder</a>
+            </div>
+        </div>
+        <div class="links-container">
+            <a href="home.html">الصفحة الرئيسية</a>
+            <a href="evreything.html">المادة العلمية</a>
+            <a href="videos.html">الفيديوهات</a>
+            <a href="books.html">الكتب</a>
+            <a href="audio.html">السمعيات</a>
+            <a href="recordings.html">التسجيلات</a>
+            <div class="profile-dropdown">
+                <button class="profile-btn"><a href="profile.html"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a></button>
+                <div class="collapse-group">
+                    <a href="atrate.html">نسبة الحضور</a>
+                    <a href="index.html">تسجيل الخروج</a>
+                    <a href="tasks.html">المهام</a>
+                    <a href="chat.html">الدردشة</a>
+                    <a href="lesson.html">الدروس</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>Attendance Rate Calculator</h1>
+  <form id="attendance-form">
+    <input type="text" class="text" id="student-id" placeholder="Enter your code" name="student-id">
+    <input type="submit" value="Calculate Attendance Rate">
+  </form>
+  <div class="result" id="result"></div>
+	<script>
+		const apiKey = "AIzaSyCxo5hLxo7Z-buV7BhbMQJXp7IcShFWWmk";
+		const sheetId = "1Dgxi-XyuNbINJGQR1T9vDOYzuzw7eLkK1unLvhMypbU";
+		const range = "Sheet1!A:X";
+
+		document.getElementById("attendance-form").addEventListener("submit", async (e) => {
+			e.preventDefault();
+			const studentId = document.getElementById("student-id").value.trim();
+			if (studentId) {
+				try {
+					const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1Dgxi-XyuNbINJGQR1T9vDOYzuzw7eLkK1unLvhMypbU/values/Class%201!B:X?key=AIzaSyCxo5hLxo7Z-buV7BhbMQJXp7IcShFWWmk`);
+					const data = await response.json();
+					const values = data.values;
+          console.log(values);
+          
+          // const studentValue  = values[3];
+          // console.log(studentValue);
+          // const attendanceRate = studentValue[studentValue.length - 1];
+          // console.log(attendanceRate);
+          let attendanceRate = 0;
+					const students = {};
+					values.forEach((row) => {
+            console.log(row);
+            if(row[0] === studentId){
+              attendanceRate = row[row.length - 1];
+            }
+					});
+					// const attendanceRate = calculateAttendanceRate(studentId, students);
+					displayResult(`Attendance rate: ${attendanceRate}%`);
+				} catch (error) {
+					console.error(error);
+					displayResult("Error");
+				}
+			}
+		});
+
+		function calculateAttendanceRate(studentId, students) {
+			const studentIndex = students["ID"].indexOf(studentId);
+			if (studentIndex === -1) {
+				return "Student not found";
+			}
+			const attendanceData = students["Attendance"].slice(studentIndex);
+			const totalClasses = attendanceData.length;
+			const attendedClasses = attendanceData.filter((status) => status === "Present").length;
+			return Math.round((attendedClasses / totalClasses) * 100);
+		}
+
+		function displayResult(result) {
+			document.getElementById("result").textContent = result;
+		}
+	</script> 
+    <script>
+        const profileIcon = document.querySelector('.profile-btn');
+        const collapseGroup = document.querySelector('.collapse-group');
+
+        profileIcon.addEventListener('mouseenter', () => {
+            collapseGroup.style.display = 'block';
+        });
+
+        collapseGroup.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+                collapseGroup.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>
