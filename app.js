@@ -75,7 +75,7 @@ app.post('/login', async (req, res) => {
     if (passwordMatch) {
       // Set up a session for the authenticated user
       req.session.user = user;
-      res.redirect('/profile');
+      res.redirect('profile.html');
     } else {
       res.send('Incorrect password.');
     }

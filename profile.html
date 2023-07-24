@@ -1,158 +1,18 @@
+<!-- profile.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<style>.card {
-  --main-color: #000;
-  --submain-color: #78858F;
-  --bg-color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  position: relative;
-  width: 300px;
-  height: 384px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 20px;
-  background: var(--bg-color);
-}
-
-.card__img {
-  height: 192px;
-  width: 100%;
-}
-
-.card__img svg {
-  height: 100%;
-  border-radius: 20px 20px 0 0;
-}
-
-.card__avatar {
-  position: absolute;
-  width: 114px;
-  height: 114px;
-  background: var(--bg-color);
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: calc(50% - 57px);
-}
-
-.card__avatar svg {
-  width: 100px;
-  height: 100px;
-}
-
-.card__title {
-  margin-top: 60px;
-  font-weight: 500;
-  font-size: 18px;
-  color: var(--main-color);
-}
-
-.card__subtitle {
-  margin-top: 10px;
-  font-weight: 400;
-  font-size: 15px;
-  color: var(--submain-color);
-}
-
-.card__btn {
-  margin-top: 15px;
-  width: 76px;
-  height: 31px;
-  border: 2px solid var(--main-color);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 11px;
-  color: var(--main-color);
-  background: var(--bg-color);
-  text-transform: uppercase;
-  transition: all 0.3s;
-}
-
-.card__btn-solid {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.card__btn:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.card__btn-solid:hover {
-  background: var(--bg-color);
-  color: var(--main-color);
-}</style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Profile</title>
-  <style>
-    /* Your CSS styles for the profile card here */
-    /* ... (styles for the profile card) ... */
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <div class="card">
-    <div class="card__img">
-      <svg><!-- Your SVG content here --></svg>
+    <div class="container">
+        <h2>Welcome to Your Profile</h2>
+        <p>Username: <%= username %></p>
+        <!-- Display other user profile data as needed -->
+        <a href="/logout">Logout</a>
     </div>
-    <div class="card__avatar">
-      <svg><!-- Your SVG content here --></svg>
-    </div>
-    <div class="card__title" id="displayName"></div>
-    <div class="card__subtitle" id="userRole"></div>
-    <div class="card__wrapper">
-      <button class="card__btn" id="logoutBtn">Logout</button>
-    </div>
-  </div>
-
-  <!-- Firebase SDK scripts -->
-  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
-  <script>
-    // Firebase configuration
-    const firebaseConfig = {
-  apiKey: "AIzaSyDA_nKTQi-TJJYMAjllmsgP5TDYshEo9wc",
-  authDomain: "login3-ed151.firebaseapp.com",
-  projectId: "login3-ed151",
-  storageBucket: "login3-ed151.appspot.com",
-  messagingSenderId: "561296683654",
-  appId: "1:561296683654:web:b3dc2645629c6de5c49707"
-};
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-
-    // Function to check if a user is signed in or not
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        // User is signed in, update the profile card
-        document.getElementById("displayName").textContent = user.displayName;
-        document.getElementById("userRole").textContent = "Web Development"; // You can customize this part based on your application.
-
-        // Handle logout button click
-        document.getElementById("logoutBtn").addEventListener("click", () => {
-          auth.signOut().then(() => {
-            // User is signed out, redirect to the login page
-            window.location.href = "index.html";
-          }).catch((error) => {
-            console.error("Logout error:", error);
-          });
-        });
-      } else {
-        // User is not signed in, redirect to the login page
-        window.location.href = "index.html";
-      }
-    });
-  </script>
 </body>
 </html>
