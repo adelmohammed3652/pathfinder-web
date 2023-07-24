@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://drive.google.com/uc?export=view&id=1GOnqY3jTzarVHamfVZ7IVZiuNEcbskIM">
+    <title>slides</title>
+    <style>
+        body {
+            background-color: rgba(0, 77, 77, 0.637);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: #444444;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 0.5rem;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            font-size: 18px;
+            margin-right: 0.5rem;
+            color: white;
+        }
+
+        .text a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .links-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .links-container a {
+            text-decoration: none;
+            color: white;
+            margin-left: 1rem;
+            padding: 0.5rem;
+        }
+
+        .links-container a:hover {
+            background-color: #37508a;
+            border-radius: 0.5rem;
+        }
+
+        .profile-dropdown {
+            position: relative;
+        }
+
+        .profile-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            margin-left: 1rem;
+        }
+
+        .collapse-group {
+            position: absolute;
+            top: 100%;
+            right: -1rem;
+            background: #444444;
+            padding: 0.5rem;
+            display: none;
+            min-width: 150px;
+            z-index: 999;
+        }
+
+        .profile-dropdown:hover .collapse-group {
+            display: block;
+        }
+
+        .collapse-group a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        .collapse-group a:hover {
+            background-color: #37508a;
+            border-radius: 0.5rem;
+        }
+
+        /* Responsive Styles */
+
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .logo-container {
+                margin-bottom: 1rem;
+            }
+
+            .links-container {
+                flex-direction: column;
+            }
+
+            .links-container a {
+                margin: 0.5rem 0;
+            }
+
+            .profile-dropdown {
+                position: static;
+            }
+
+            .collapse-group {
+                position: static;
+                display: block;
+                background: none;
+                padding: 0;
+                min-width: auto;
+                margin-top: 1rem;
+                right: 0;
+            }
+        }
+        .libray {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+        ::-webkit-scrollbar{
+            background: transparent;
+        }
+        .gh img{
+            height: 15rem;
+            width: 30rem;
+          
+
+        }.gh{
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="https://drive.google.com/uc?export=view&id=1GOnqY3jTzarVHamfVZ7IVZiuNEcbskIM" alt="Logo">
+            </div>
+            <div class="text">
+                <a href="home.html">Pathfinder</a>
+            </div>
+        </div>
+        <div class="links-container">
+            <a href="evreything.html">المادة العلمية</a>
+            <a href="videos.html">الفيديوهات</a>
+            <a href="books.html">الكتب</a>
+            <a href="audio.html">السمعيات</a>
+            <a href="recordings.html">التسجيلات</a>
+            <a href="home.html">الصفحة الرئيسية</a>
+
+            <div class="profile-dropdown">
+                <button class="profile-btn"><a href="profile.html"><i class="fa-regular fa-user" style="color: #ffffff;"></i></a></button>
+                <div class="collapse-group">
+                    <a href="atrate.html">نسبة الحضور</a>
+                    <a href="index.html">تسجيل الخروج</a>
+                    <a href="tasks.html">المهام</a>
+                    <a href="chat.html">الدردشة</a>
+                    <a href="lesson.html">الدروس</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="libray">
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1T4FcvUYu7LKNyJS-oVp2V0xRdJ-HUTxG" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/1.png" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1jtk5rXP6YvWta-v7htnBgCeA1Woqv7vY" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/2.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1fEKUnGSZBpgbMv90YBRUemqpHMpj8dsK" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/3.png" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1AOHcOnstNKqGZWKb87u7pSdtLWCPCYxr" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/4.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1rqHK6QNk8q9Bs8E6O8kvTd9dWpgt7RV4" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/5.JPG" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1DpSUvf6o4w4AO-QRCvktZighODbosV9X" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/6.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1whgZuK0jhdlpJNn6qNrJWQIx8J4MLDhO" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/7.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1Hlak08YOliwRYxZ7jvCAbfACqMfvkVS4" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/8.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1SC4ue6uh7cpEAZ1bcZcTFS8o4HiMB4fV" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/9.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1Nuh7m_f0DnicAdh0z-h28981G6WIR1lE" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/10.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=17igLd_IdZBq7C280uC465jkhxsSlD-tx" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/11.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1NbdEDcgeF431cOAtc2YZgwkn4G10cAWA" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/12.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1f7--bXMURb636U97ddrhnl83i5U3UUjO" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/13-14.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1jRMZKE8uDO9TpoSjyGNQmWNZBAfEqUM" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/15.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1XBiiMX_CTvJhlRPRNm-9fUChao7jYzKS" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/16.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1nXuIUDvWzUsGn-K2JPHvrZxS2cPrSGIE" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/17.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1Pfd1XCo39ApRrfhyHF_yPWDpm7egcjwK" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/18.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1V2xgQDr4rwWJthkwOXd_65_SaY_Xbct8" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/19.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1BnCUAhVrIiLjH50D6-aiefKkVTqVeIep" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/20.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1AC4n44vTh5JRqJ48sCF7l9AQAXDwO2X2" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/21-22.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1AC4n44vTh5JRqJ48sCF7l9AQAXDwO2X2" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/23.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1i_3JvsuAuQN2L8bvlLXmInP8C6iPIyhK" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/25.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1oTOW8ltZp1HhXqMSLu_uJL46dJjKeCz9" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/26.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=14NZ4Gq6u7TwIdeVkVjzZ0fu50WyAeZP2" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/27.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1oxYBEnJUA3W6g6tMCOt57_5eFfuG2BeL" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/28.jpg" class="CENy8b" style="width:25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1AhFGE_jusL5eWC2JeC1NZgXH2OmnPJgt" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/29.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1odSpMtKnv_C7orSaxAMIv9aFlJYdYEbk" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/30.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1qXutfZUEL7PUWFQVx-29yM8Vkp3Gz7FQ" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/31.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1Dxn-LGSRnYqXu9ZE_oA9JCURw8litDBu" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/32.jpg" class="CENy8b" style="width: 25rem; margin: 0% 0 0% -7.6998037408%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1wT4VOxmiYGYY9K205qi3H-ipuJJ2kyyV" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/33.jpg" class="CENy8b" style="width: 25rem; margin: -0.5130596032% 0 -0.5130596032% 0%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1wT4VOxmiYGYY9K205qi3H-ipuJJ2kyyV" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/34.jpg" class="CENy8b" style="width: 25rem; margin: -0.5130596032% 0 -0.5130596032% 0%"></div></a>
+    <a class="gh" href="https://drive.google.com/uc?export=download&amp;id=1wT4VOxmiYGYY9K205qi3H-ipuJJ2kyyV" target="_blank" class="fqo2vd"><div class="t3iYD"><img src="p/35.jpg" class="CENy8b" style="width: 25rem; margin: -0.5130596032% 0 -0.5130596032% 0%"></div></a>
+
+</div>
+    <script>
+        const profileIcon = document.querySelector('.profile-btn');
+        const collapseGroup = document.querySelector('.collapse-group');
+
+        profileIcon.addEventListener('mouseenter', () => {
+            collapseGroup.style.display = 'block';
+        });
+
+        collapseGroup.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+                collapseGroup.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+    <!-- Chatra {literal} -->
+    <script>
+        (function(d, w, c) {
+            w.ChatraID = 'RBymSJgsNWcAWGwyc';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+    <!-- /Chatra {/literal} -->
+</html>
